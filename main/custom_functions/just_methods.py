@@ -1,5 +1,6 @@
 import math
 
+
 def calcular_promedio(lista):
 
     suma = 0
@@ -21,29 +22,6 @@ def calcular_elemento_mayor(lista):
             mayor = elemento
 
     return mayor
-
-
-def eliminar_menor_elemento(lista):
-
-    menor_elemento = lista[0]
-    posicion_menor_elemento = 0
-
-    elementos_cont = len(lista)
-
-    elemento_suma = 0
-
-    posicion_cont = 0
-
-    for elemento in lista:
-        if elemento < menor_elemento:
-            posicion_menor_elemento = posicion_cont
-            menor_elemento = elemento
-
-        posicion_cont += 1
-
-    lista.pop(posicion_menor_elemento)
-
-    return lista
 
 
 def calcular_desviacion_estandar(lista):

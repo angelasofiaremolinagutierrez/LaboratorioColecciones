@@ -10,41 +10,63 @@ print()
 temperaturas = []
 meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
 
-print("Ingrese las temperaturas de Santander")
+
+print("Ingrese las temperaturas de Santander en cada mes del año:")
 for x in range(0,12):
-    s = float(input())
-    temperaturas.append(s)
+    while True:
+        try:
+            s = float(input(meses[x]+": "))
+            temperaturas.append(s)
+            break
+        except ValueError:
+            print("Carácter no válido. Ingreselo otra vez")
+
+santander = temperaturas[0:12]
+print("Temperaturas Santander:", santander)
 
 print()
 print("Ingrese las temperaturas de Guajira")
 for y in range(0,12):
-    g = float(input())
-    temperaturas.append(g)
+    while True:
+        try:
+            g = float(input(meses[y]+": "))
+            temperaturas.append(g)
+            break
+        except ValueError:
+            print("Carácter no válido. Ingreselo otra vez")
+
+guajira = temperaturas[12:24]
+print("Temperaturas Guajira:", guajira)
 
 print()
 print("Ingrese las temperaturas de Nariño")
 for z in range(0,12):
-    n = float(input())
-    temperaturas.append(n)
+    while True:
+        try:
+            n = float(input(meses[z]+": "))
+            temperaturas.append(n)
+            break
+        except ValueError:
+            print("Carácter no válido. Ingreselo otra vez")
 
-santander = temperaturas[0:12]
-guajira = temperaturas[12:24]
 narino = temperaturas[24:36]
+print("Temperaturas Nariño:", narino)
 
-print ()
+
+print()
 print("A:")
 
 prom_santander = just_methods.calcular_promedio(santander)
 prom_guajira = just_methods.calcular_promedio(guajira)
 prom_narino = just_methods.calcular_promedio(narino)
 
-print ("El promedio de temperatura en Santander es de:",prom_santander,"grados")
-print ("El promedio de temperatura en la guajira es de:",prom_guajira,"grados")
-print ("El promedio de temperatura en Nariño es de:",prom_narino,"grados")
+print("El promedio de temperatura en Santander es de:", prom_santander, "grados")
+print("El promedio de temperatura en la guajira es de:", prom_guajira, "grados")
+print("El promedio de temperatura en Nariño es de:", prom_narino, "grados")
 
 ###
 
-2print()
+print()
 print("B:")
 promedio_nacional = just_methods.calcular_promedio(temperaturas)
 print("El promedio de temperatura nacional es de:",promedio_nacional,"grados")
@@ -103,7 +125,7 @@ print("La temperatura más alta fue de", mayor_temp, "grados, en", dep_dict[posi
 print()
 print("G:")
 de_san = just_methods.calcular_desviacion_estandar(santander)
-print("La desviación estandar de la temperatura en santander es de:" ,de_san,"grados")
+print("La desviación estandar de la temperatura en Santander es de:" ,de_san,"grados")
 
 de_gua = just_methods.calcular_desviacion_estandar(guajira)
 print("La desviación estandar de la temperatura en La Guajira es de:",de_gua,"grados")
