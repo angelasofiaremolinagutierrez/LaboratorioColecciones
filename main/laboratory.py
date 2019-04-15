@@ -1,6 +1,7 @@
 """
 Solución del laboratorio
 """
+
 from custom_functions import just_methods
 import math
 
@@ -136,3 +137,4 @@ print("La desviación estandar de la temperatura en Nariño es de:",de_na,"grado
 ###
 
 print()
+
